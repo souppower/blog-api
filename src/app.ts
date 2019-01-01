@@ -1,11 +1,9 @@
 import * as express from "express";
 
-const app = express();
+import setupHandlers from "./interface/handlers";
 
-app.get("/", (req: express.Request, res: express.Response) => {
-  res.send("Hello world");
-  res.end();
-});
+const app = express();
+setupHandlers(app);
 
 if (process.env.NODE_ENV !== "test") {
   const port = process.env.PORT || 3000;
