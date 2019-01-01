@@ -10,7 +10,8 @@ app.get("/", (req: Express.Request, res: Express.Response) => {
 });
 
 if (process.env.NODE_ENV !== "test") {
-  const server = app.listen(3000);
+  const port = process.env.PORT || 3000;
+  const server = app.listen(port);
   console.log("listening to port 3000...");
 
   if (module.hot) {
