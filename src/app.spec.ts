@@ -8,7 +8,7 @@ describe("GET /", () => {
       .get("/")
       .expect(200)
       .then(res => {
-        expect(res.text).toBe("Hello world.");
+        expect(res.text).toBe("Hello world");
       });
   });
 });

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "commonjs",
     "target": "es5",
     "lib": ["es2018", "dom"],
     "moduleResolution": "node",
@@ -13,5 +13,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "strictFunctionTypes": false
-  }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "include": ["src/**/*.ts"]
 }
